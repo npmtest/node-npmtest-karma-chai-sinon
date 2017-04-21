@@ -1,1 +1,39 @@
-{     "devDependencies": {         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmtest-karma-chai-sinon",     "homepage": "https://github.com/npmtest/node-npmtest-karma-chai-sinon",     "repository": {         "type": "git",         "url": "https://github.com/npmtest/node-npmtest-karma-chai-sinon.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### basic test coverage for  [karma-chai-sinon (v0.1.5)](https://github.com/tubalmartin/karma-chai-sinon)  [![npm package](https://img.shields.io/npm/v/npmtest-karma-chai-sinon.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-karma-chai-sinon) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-karma-chai-sinon.svg)](https://travis-ci.org/npmtest/node-npmtest-karma-chai-sinon)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmtest/node-npmtest-karma-chai-sinon",
+    "keywords": [
+        "coverage",
+        "test",
+        "karma-chai-sinon"
+    ],
+    "license": "MIT",
+    "main": "lib.npmtest_karma_chai_sinon.js",
+    "name": "npmtest-karma-chai-sinon",
+    "nameAlias": "npmtest_karma_chai_sinon",
+    "nameOriginal": "npmtest-karma-chai-sinon",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmtest/node-npmtest-karma-chai-sinon.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
